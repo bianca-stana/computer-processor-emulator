@@ -1,0 +1,36 @@
+E0:
+READ None None A
+READ None None B
+READ None None C
+READ None None TWO
+- TWO TWO ZERO
+* B B T1
+* TWO A T2
+* TWO T2 T3
+* T3 C T3
+- T1 T3 T1
+- ZERO B T3
+> T1 ZERO E1
+== T1 ZERO E2
+/ T3 T2 T3
+- ZERO T1 T1
+sqrt T1 None T1
+/ T1 T2 T1
+WRITE None None T3
+WRITE None None T1
+STOP None None None
+
+E1:
+sqrt T1 None T1
+- T3 T1 T4
+/ T4 T2 T4
+WRITE None None T4
++ T3 T1 T4
+/ T4 T2 T4
+WRITE None None T4
+STOP None None None
+
+E2:
+/ T3 T2 T3
+WRITE None None T3
+STOP None None None
